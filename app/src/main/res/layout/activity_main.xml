@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sound Settings"
+        android:textSize="20dp"
+        android:layout_centerHorizontal="true"/>
+    <Button
+        android:layout_marginTop="40dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="40dp"
+        android:id="@+id/VolumeUp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Up"/>
+    <Button
+        android:layout_marginTop="40dp"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="40dp"
+        android:id="@+id/VolumeDown"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Down"/>
+    <TextView
+        android:id="@+id/back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="BackLight"
+        android:textSize="20dp"
+        android:layout_below="@id/VolumeDown"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"/>
+    <SeekBar
+        android:id="@+id/backLight"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/back"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"/>
+    <TextView
+        android:id="@+id/extra"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Extra Settings"
+        android:textSize="20dp"
+        android:layout_below="@id/backLight"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"/>
+
+
+    <Button
+        android:id="@+id/suspend"
+        android:layout_below="@id/extra"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Suspend"/>
+
+
+
+
+
+</RelativeLayout>
