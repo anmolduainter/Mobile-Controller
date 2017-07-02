@@ -2,7 +2,9 @@
 <RelativeLayout android:layout_height="match_parent"
     android:layout_width="match_parent"
     xmlns:android="http://schemas.android.com/apk/res/android">
+
     <TextView
+        android:id="@+id/sound"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Sound Settings"
@@ -61,7 +63,27 @@
         android:layout_height="wrap_content"
         android:text="Suspend"/>
 
+    <EditText
+        android:layout_marginTop="20dp"
+        android:id="@+id/ipaddr"
+        android:layout_below="@id/suspend"
+        android:hint="ip Address"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <Button
+        android:layout_below="@id/ipaddr"
+        android:layout_centerHorizontal="true"
+        android:layout_width="wrap_content"
+        android:text="submit"
+        android:layout_height="wrap_content"
+        android:id="@+id/submit"/>
 
+    <Button
+        android:layout_below="@id/submit"
+        android:layout_width="wrap_content"
+        android:text="JoyStick"
+        android:layout_height="wrap_content"
+        android:id="@+id/joystick"/>
 
 
 

@@ -1,10 +1,12 @@
 package com.example.anmol.client;
 
+import android.content.Intent;
 import android.os.AsyncTask;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.SeekBar;
 import android.widget.TextView;
 
@@ -18,10 +20,11 @@ import java.net.Socket;
 
 public class MainActivity extends AppCompatActivity {
 
-    Button Up,Down,Suspend;
+    Button Up,Down,Suspend,submit,JoyStick;
+    EditText ipaddr;
     SeekBar seekBar;
     int brightnessProgress=0;
-    final String HOST="192.168.0.101";
+    String HOST;
     final int PORT=9999;
     int type=0;
 
@@ -33,6 +36,25 @@ public class MainActivity extends AppCompatActivity {
         Down= (Button) findViewById(R.id.VolumeDown);
         seekBar= (SeekBar) findViewById(R.id.backLight);
         Suspend= (Button) findViewById(R.id.suspend);
+        JoyStick= (Button) findViewById(R.id.joystick);
+        ipaddr= (EditText) findViewById(R.id.ipaddr);
+        submit= (Button) findViewById(R.id.submit);
+
+        JoyStick.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i=new Intent(MainActivity.this,JoyStick.class);
+                i.putExtra("ip",ipaddr.getText().toString());
+                startActivity(i);
+            }
+        });
+
+        submit.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                HOST=ipaddr.getText().toString();
+            }
+        });
         Up.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
